@@ -1,0 +1,156 @@
+.nav__bar__container {
+    *zoom: 1;
+    background-color: #fff;
+    color: #000;
+    line-height: 35px;
+    min-height: 17px;
+    border-radius: 0;
+    -moz-box-shadow: 0 1px 2px 0 rgba(63, 63, 68, 0.15);
+    -webkit-box-shadow: 0 1px 2px 0 rgba(63, 63, 68, 0.15);
+    box-shadow: 0 1px 2px 0 rgba(63, 63, 68, 0.15);
+    border: 0 !important;
+}
+.nav__bar__container:before,
+.nav__bar__container:after {
+    display: table;
+    content: "";
+}
+.nav__bar__container:after {
+    clear: both;
+}
+.nav__bar__container,
+.nav__bar__container .nav__bar__tabs a {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+.nav__bar__container .nav__bar__tabs {
+    margin: -2px 0 0 0;
+}
+.nav__bar__container .nav__bar__tabs a {
+    float: left;
+    border-width: 0 1px 0 0;
+    text-align: center;
+    margin: 0 30px 0 0;
+    padding: 6px;
+    color: inherit;
+    min-width: 80px;
+    font-size: 14px;
+    border: 0;
+    min-width: 90px;
+}
+.nav__bar__container .nav__bar__tabs a:first-child {
+    border-bottom-left-radius: 0;
+}
+.nav__bar__container .nav__bar__tabs a.active {
+    text-decoration: none;
+    background: transparent;
+    border-top: 3px solid #02b875;
+    padding: 3px 6px 6px 6px;
+    font-weight: 600;
+}
+.nav__bar__container .nav__bar__tabs a:hover {
+    text-decoration: none;
+    background: transparent;
+    border-top: 3px solid rgba(2, 184, 117, 0.3);
+    padding: 3px 6px 6px 6px;
+    font-weight: 600;
+}
+.nav__bar__container .mobile__icon__nav__bar:before {
+    content: "";
+    background-position: 0 -197px;
+    height: 22px;
+    width: 22px;
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    vertical-align: text-top;
+}
+
+.navbar__icon__show {
+    display: none;
+}
+
+@media (max-width: 45em) {
+    .nav__bar__container {
+        padding: 0;
+        text-align: right;
+        cursor: pointer;
+        position: relative;
+        z-index: 2;
+        border-width: 1px 0;
+        -moz-box-shadow: 0 3px 4px 0 #eee;
+        -webkit-box-shadow: 0 3px 4px 0 #eee;
+        box-shadow: 0 3px 4px 0 #eee;
+    }
+    .nav__bar__container,
+    .nav__bar__container .nav__bar__tabs a:first-child {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .nav__bar__container .mobile__icon__nav__bar {
+        z-index: 3;
+        padding: 6px;
+        padding-left: 6px;
+        display: inline-block;
+    }
+    .nav__bar__container .mobile__icon__nav__bar:hover {
+        text-decoration: none;
+    }
+    .nav__bar__container .mobile__icon__nav__bar:before {
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        *zoom: 1;
+        *display: inline;
+        background: none;
+        font-size: 20px;
+        color: #6f7c87;
+        content: "\f2ba";
+        line-height: 1;
+    }
+    .nav__bar__container .nav__bar__tabs {
+        display: none;
+        margin-top: 10px;
+        margin: 0;
+        position: absolute;
+        width: 100%;
+        margin-top: 12px;
+        -moz-box-shadow: 0 1px 2px 0 rgba(63, 63, 68, 0.15);
+        -webkit-box-shadow: 0 1px 2px 0 rgba(63, 63, 68, 0.15);
+        box-shadow: 0 1px 2px 0 rgba(63, 63, 68, 0.15);
+        margin-left: -10px;
+        background-color: #f3f5f7;
+    }
+    .nav__bar__container .nav__bar__tabs,
+    .nav__bar__container .nav__bar__tabs a.active,
+    .nav__bar__container .nav__bar__tabs a:hover {
+        background-color: #fff;
+    }
+    .nav__bar__container .nav__bar__tabs a {
+        float: none;
+        font-weight: normal;
+        border-width: 1px 0 0 0;
+        display: block;
+        min-width: auto;
+        text-align: left;
+        background: #f3f5f7;
+        color: #183247;
+        margin: 0;
+        padding: 3px 16px;
+        border-bottom: solid 1px rgba(24, 50, 71, 0.17);
+        font-size: 16px;
+    }
+    .nav__bar__container .nav__bar__tabs a:last-child {
+        padding-bottom: 0;
+    }
+    .nav__bar__container .nav__bar__tabs a:hover,
+    .nav__bar__container .nav__bar__tabs a.active {
+        padding: 3px 16px;
+        background: #dadfe3;
+        border-top: 0px;
+    }
+    .navbar__icon__show {
+        display: block;
+    }
+}

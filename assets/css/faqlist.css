@@ -1,0 +1,107 @@
+.breadcrumb__links {
+    margin: 20px 0 10px 0;
+}
+
+.breadcrumb__links a {
+    font-size: 14px;
+    color: #2753d7;
+}
+
+.breadcrumb__links a:first-child::before {
+    content: "";
+    margin-right: 0;
+}
+
+.breadcrumb__links a:before {
+    content: "/";
+    margin-right: 10px;
+    color: #bbbbbb;
+    font-size: 16px;
+    font-weight: 200;
+    position: relative;
+    top: 1px;
+}
+.faq__list {
+    margin-bottom: 12px;
+    margin-top: 10px;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.faq__row {
+    border-top: 1px solid #f3f3f3;
+}
+
+.faq__list__row {
+    padding: 16px 0;
+}
+
+.faq__list__row .faq__title {
+    margin-top: 6px;
+}
+
+.faq__row .faq__description {
+    font-size: 14px;
+}
+
+.faq__date, .p-info, .info-text, .list-noinfo, .faq__description {
+    font-size: 12px;
+    line-height: 1.9;
+    color: #6f7c87;
+}
+
+.faq__row .faq__date {
+    font-size: 12px;
+    line-height: 1.9;
+    color: #6f7c87;
+}
+
+.faq__list__row .faq__title a {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 16px;
+}
+
+.faq__list__row .icon-article-table-row {
+    margin-left: 0px;
+    margin-right: 12px;
+    float: left;
+}
+
+.ficon-suggested-solution, .icon-article-table-row {
+    background: none;
+    margin: 0 5px 0 0;
+    padding: 0;
+    width: 24px;
+    height: 84px;
+    font-size: 28px;
+    color: #9aa1a6;
+    line-height: 84px;
+    -moz-box-shadow: -8px 0 10px -10px rgba(0,0,0,0.5) inset;
+    -webkit-box-shadow: -8px 0 10px -10px rgb(0 0 0 / 50%) inset;
+    box-shadow: -8px 0 10px -10px rgb(0 0 0 / 50%) inset;
+    overflow: hidden;
+}
+
+@media (max-width: 45em) {
+    .faq__row.faq__list__row .faq__description, .faq__row.faq__list__row .faq__date {
+        margin-left: 36px;
+        font-size: 13px;
+    }
+
+    .faq__description {
+        overflow: hidden;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .help {
+        overflow: hidden;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+}
