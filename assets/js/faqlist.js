@@ -1,7 +1,7 @@
 $(function () {
-    $("#headerContent").load("views/header.html");
-    $("#navContent").load("views/nav.html");
-    $("#bodyContent").load("views/faqlist.html");
-    $("#footerContent").load("views/footer.html");
-    $("#copyrightContent").load("views/copyright.html");
+    $("#headerContent").load("/template-freshdesk/views/header.html");
+    $("#navContent").load("/template-freshdesk/views/nav.html");
+    $("#bodyContent").load("/template-freshdesk/views/faqlist.html");
+    $("#footerContent").load("/template-freshdesk/views/footer.html");
+    $("#copyrightContent").load("/template-freshdesk/views/copyright.html");
 });
