@@ -74,6 +74,7 @@
 @media (max-width: 45em) {
     .nav__bar__container {
         padding: 0;
+        display: none;
         text-align: right;
         cursor: pointer;
         position: relative;
