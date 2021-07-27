@@ -65,7 +65,7 @@
         border-bottom: 1px solid #dadfe3;
     }
     .header__container a {
-        float: left;
+        width: 100%;
     }
     .header__container .header__wrapper {
         height: 143px;
