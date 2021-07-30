@@ -1,26 +1,47 @@
 $(function () {
     $("#headerContent").load(`/${dir_url}views/header.html`);
     $("#navContent").load(`/${dir_url}views/nav.html`);
-    $("#bodyContent").load(`/${dir_url}views/body.html`, addBodyContent);
+    $("#bodyContent").load(`/${dir_url}views/category.html`, addBodyContent);
     $("#footerContent").load(`/${dir_url}views/footer.html`);
     $("#copyrightContent").load(`/${dir_url}views/copyright.html`);
 });
 
 function addBodyContent() {
-    let category = config.data.category;
-    category.map((value) => {
-        $("#solutions-index-home")
+    let queryParams = Object.fromEntries(new URLSearchParams(location.search));
+    if(queryParams && Object.keys(queryParams).length === 0) {
+        $("#category-index-home").replaceWith(`
+            <div style="min-height: calc(100vh - 200px);font-size: 20px;display: flex;justify-content: center;align-items: center;">
+                Nothing Found!
+            </div>
+        `)
+        return;
+    }
+    let filteredCategories = config.data.category.filter((value) => {
+        return value.id.toLowerCase() === queryParams.article.toLowerCase()
+    })
+
+    $("#category-index-home")
+    .append(
+        `
+            <div class="breadcrumb">
+                <a href="/home.html"> Solution home </a>
+            </div>
+        `
+    );
+    
+    filteredCategories.map((value) => {
+        $("#category-index-home")
             .append(
                 `
                 <div class="content__section">
-                    <h3 class="heading"><a href="categories.html?article=${value.id}">${value.main_title}</a></h3>
+                    <h3 class="heading">${value.main_title}</h3>
                     <div class="article-container" id=${value.id}></div>
                 </div>
             `
         );
     });
 
-    category.map((value) => {
+    filteredCategories.map((value) => {
         value.sub_category.map((articles_block) => {
             $(`#${value.id}`)
                 .append(
@@ -37,7 +58,7 @@ function addBodyContent() {
         })
     });
 
-    category.map((value) => {
+    filteredCategories.map((value) => {
         value.sub_category.map((articles_block) => {
             articles_block.articles.map((article, index) => {
                 if(index > 4) { return; }

@@ -37,6 +37,14 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <!-- Custom javascript -->
+    <script>
+        var url = window.location;
+        var dir_url = "";
+        if (!url.hostname.includes("127.0.0.1")) {
+            dir_url = "template-freshdesk/"
+        }
+    </script>
+    <script src="assets/js/config.js"></script>
     <script src="assets/js/home.js"></script>
 </head>
 

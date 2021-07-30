@@ -1,0 +1,25 @@
+.breadcrumb {
+    margin: 20px 0 10px 0;
+}
+
+.breadcrumb a {
+    margin-right: 7px;
+    font-size: 14px;
+    color: #2753d7;
+    text-decoration: none;
+}
+
+.breadcrumb a:first-child::before {
+    content: "";
+    margin-right: 0;
+}
+
+.breadcrumb a:before {
+    content: "/";
+    margin-right: 10px;
+    color: #bbbbbb;
+    font-size: 16px;
+    font-weight: 200;
+    position: relative;
+    top: 1px;
+}

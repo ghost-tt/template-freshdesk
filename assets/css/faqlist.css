@@ -5,6 +5,7 @@
 .breadcrumb__links a {
     font-size: 14px;
     color: #2753d7;
+    text-decoration: none;
 }
 
 .breadcrumb__links a:first-child::before {
@@ -48,6 +49,10 @@
     font-size: 12px;
     line-height: 1.9;
     color: #6f7c87;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 }
 
 .faq__row .faq__date {

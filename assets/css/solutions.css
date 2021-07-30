@@ -6,6 +6,7 @@
     margin-right: 7px;
     font-size: 14px;
     color: #2753d7;
+    text-decoration: none;
 }
 
 .breadcrumb a:first-child::before {
@@ -26,6 +27,11 @@
 .content h2 {
     font-weight: 600;
     font-size: 22px;
+}
+
+.date {
+    padding-top: 4px;
+    margin: 0 0 10.9375px;
 }
 
 .fc-article-show p {
@@ -64,8 +70,99 @@ hr {
     font-weight: normal;
 }
 
+.solution-print--icon {
+    float: right;
+    margin-top: 10px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.solution-print--icon .icon-print {
+    background-image: none;
+    color: #6f7c87;
+    vertical-align: top;
+}
+
+.solution-print--icon .text-print {
+    font-size: 13px;
+    margin-right: 10px;
+    color: #3b5998;
+    vertical-align: top;
+}
+
 .hide {
     display: none;
+}
+
+table {
+    max-width: 100%;
+    background-color: transparent;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.article-body table {
+    cursor: default;
+    border: none;
+}
+
+.article-body table td, .article-body table th {
+    cursor: text;
+    font-size: inherit;
+    font-size: 13px;
+    padding: 4px;
+    border: 1px solid #afafaf;
+}
+
+.article-body ol, .article-body ul {
+    margin: 8px 0 4px 0;
+    padding: 0 0 0 40px;
+    line-height: 17px;
+}
+
+.article-body img.fr-dii {
+    display: inline-block;
+    float: none;
+    vertical-align: bottom;
+    margin-left: 5px;
+    margin-right: 5px;
+    max-width: calc(100% - (2 * 5px));
+}
+
+.article-body img.fr-dib {
+    margin: 5px auto;
+    display: block;
+    float: none;
+    vertical-align: top;
+}
+
+.article-body ul {
+    list-style: disc outside;
+}
+
+.article-body h3 {
+    font-size: 1.17em;
+}
+
+.article-body p, .article-body li, .article-body div {
+    font-size: 13px;
+    line-height: 18px;
+    margin: 0;
+}
+
+.article-body code, .article-body pre, .article-body p, .article-body li, .article-body div {
+    word-break: normal;
+    word-wrap: break-word;
+}
+
+
+.article-body code, .article-body pre, .article-body p, .article-body li, .article-body div {
+    word-break: normal;
+    word-wrap: break-word;
+}
+
+.article-body h1, .article-body h2, .article-body h3, .article-body h4, .article-body h5, .article-body h6 {
+    font-weight: 400;
 }
 
 @media (max-width: 45em) {
