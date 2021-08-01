@@ -40,7 +40,7 @@ function addBodyContent() {
     .append(
         `
             <div class="breadcrumb">
-                <a href="/home.html"> Solution home </a>
+                <a href="home.html"> Solution home </a>
             </div>
         `
     );

@@ -44,7 +44,7 @@ function addFaqList() {
     .append(
         `
         <div class="breadcrumb__links">
-            <a href="/home.html"> Solution home </a>
+            <a href="home.html"> Solution home </a>
             <a href="categories.html?article=${queryParams.article}">Pembayaran</a>
         </div>
         `

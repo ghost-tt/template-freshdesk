@@ -46,7 +46,7 @@ function addBodyContent() {
     .append(
         `
         <div class="breadcrumb">
-            <a href="/home.html"> Solution home </a>
+            <a href="home.html"> Solution home </a>
             <a href="categories.html?article=${queryParams.article}">${filteredCategory[0].main_title}</a>
             <a href="faqlist.html?article=${queryParams.article}&faqlist=${queryParams.faqlist}">${filteredArticle[0].title}</a>
         </div>
