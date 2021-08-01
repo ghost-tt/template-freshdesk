@@ -1,10 +1,26 @@
 $(function () {
-    $("#headerContent").load(`/${dir_url}views/header.html`);
-    $("#navContent").load(`/${dir_url}views/nav.html`);
+    $("#headerContent").load(`/${dir_url}views/header.html`, addHeaderLogo);
+    $("#navContent").load(`/${dir_url}views/nav.html`, activateTab);
     $("#bodyContent").load(`/${dir_url}views/body.html`, addBodyContent);
     $("#footerContent").load(`/${dir_url}views/footer.html`);
     $("#copyrightContent").load(`/${dir_url}views/copyright.html`);
 });
+
+function addHeaderLogo() {
+    let path = `/${dir_url}assets/images/logo.png`;
+    $('#main-logo-header').attr('src', path);
+}
+
+function activateTab() {
+    let homePath = window.location.pathname.includes("home");
+    if(homePath) {
+        $("#home-page").addClass("active");
+        $("#solutions-page").removeClass("active");
+    } else {
+        $("#home-page").removeClass("active");
+        $("#solutions-page").addClass("active");
+    }
+}
 
 function addBodyContent() {
     let category = config.data.category;

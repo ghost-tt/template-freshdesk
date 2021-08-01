@@ -1,10 +1,21 @@
 $(function () {
     $("#headerContent").load(`/${dir_url}views/header.html`);
-    $("#navContent").load(`/${dir_url}views/nav.html`);
+    $("#navContent").load(`/${dir_url}views/nav.html`, activateTab);
     $("#bodyContent").load(`/${dir_url}views/faqlist.html`, addFaqList);
     $("#footerContent").load(`/${dir_url}views/footer.html`);
     $("#copyrightContent").load(`/${dir_url}views/copyright.html`);
 });
+
+function activateTab() {
+    let homePath = window.location.pathname.includes("home");
+    if(homePath) {
+        $("#home-page").addClass("active");
+        $("#solutions-page").removeClass("active");
+    } else {
+        $("#home-page").removeClass("active");
+        $("#solutions-page").addClass("active");
+    }
+}
 
 function addFaqList() {
     let queryParams = Object.fromEntries(new URLSearchParams(location.search));
@@ -43,7 +54,7 @@ function addFaqList() {
                     <div class="ellipsis faq__title">
                         <a class="c-link" href="solutions.html?article=${filteredFaq[0].id}&faqlist=${filteredCategory[0].id}&question=${article.id}">${article.question}</a>
                     </div>
-                    <div class="faq__description">${article.question}</div>
+                    <div class="faq__description">${article.answer}</div>
                     <div class="faq__date">${article.date}</div>
                 </div>
             `
