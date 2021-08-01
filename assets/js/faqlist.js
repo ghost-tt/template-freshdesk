@@ -1,10 +1,15 @@
 $(function () {
-    $("#headerContent").load(`/${dir_url}views/header.html`);
+    $("#headerContent").load(`/${dir_url}views/header.html`, addHeaderLogo);
     $("#navContent").load(`/${dir_url}views/nav.html`, activateTab);
     $("#bodyContent").load(`/${dir_url}views/faqlist.html`, addFaqList);
     $("#footerContent").load(`/${dir_url}views/footer.html`);
     $("#copyrightContent").load(`/${dir_url}views/copyright.html`);
 });
+
+function addHeaderLogo() {
+    let path = `/${dir_url}assets/images/logo.png`;
+    $('#main-logo-header').attr('src', path);
+}
 
 function activateTab() {
     let homePath = window.location.pathname.includes("home");
