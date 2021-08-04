@@ -176,4 +176,7 @@ table {
     hr {
         margin: 15.625px 0;
     }
+    .article-body {
+        overflow-x: unset;
+    }
 }
