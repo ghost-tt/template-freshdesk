@@ -54,6 +54,11 @@ a:hover, .a-link:hover {
     cursor: pointer;
 }
 
+img {
+    width: 100% !important;
+    height: 100%;
+}
+
 .body__container {
     flex-grow: 1;
 }
